@@ -1,0 +1,42 @@
+entity Panier {
+	dateCreation Instant
+}
+
+entity Historique {
+	dateValidation Instant
+}
+
+
+entity Article{
+ 	libelle String required minlength(2) maxlength(30)
+    prix Integer
+}
+
+
+
+entity TypeArticle{
+ 	libelle String required minlength(2) maxlength(30)
+}
+
+relationship OneToOne {
+Panier{client} to User
+}
+
+relationship OneToMany {
+TypeArticle {article} to Article{typeArticle}
+}
+
+relationship ManyToMany{
+Panier{article} to Article{panier}
+Historique{articleHistorique} to Article{panierHistorique}
+}
+
+relationship ManyToOne{
+Historique{client} to User
+}
+
+dto all with mapstruct
+service all with serviceImpl
+
+paginate Historique with pagination
+

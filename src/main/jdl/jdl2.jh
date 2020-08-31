@@ -1,0 +1,27 @@
+entity Panier {
+	dateCreation Instant
+}
+
+entity Article{
+ 	libelle String required minlength(2) maxlength(30)
+}
+
+entity TypeArticle{
+ 	libelle String required minlength(2) maxlength(30)
+}
+
+relationship OneToOne {
+Panier{client} to User
+}
+
+relationship OneToMany {
+TypeArticle {article} to Article{typeArticle}
+}
+
+relationship ManyToMany{
+Panier{article} to Article{panier}
+}
+
+dto all with mapstruct
+service all with serviceImpl
+

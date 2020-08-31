@@ -1,0 +1,23 @@
+{
+  "eCommerceJhipsterV1App": {
+    "typeArticle": {
+      "home": {
+        "title": "TypeArticles",
+        "createLabel": "Créer un nouveau Type Article",
+        "createOrEditLabel": "Créer ou éditer un Type Article",
+        "notFound": "Aucun Type Article trouvé"
+      },
+      "created": "Un nouveau Type Article a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Type Article avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Type Article avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Type Article {{ id }} ?"
+      },
+      "detail": {
+        "title": "Type Article"
+      },
+      "libelle": "Libelle",
+      "article": "Article"
+    }
+  }
+}
